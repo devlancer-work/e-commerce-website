@@ -1,0 +1,47 @@
+:root {
+    font-size: 62.5% !important;
+    --light-dark: #444444;
+    --dark: #171717;
+    --grey: #c4c4c4;
+    --light: #ededed;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+a {
+    text-decoration: none;
+}
+
+.row {
+    --bs-gutter-x: 0;
+}
+/* main */
+#main {
+    width: 100%;
+    height: 100vh;
+}
+.leftBar {
+    background-color: var(--dark);
+    height: 100vh;
+}
+.rightBar {
+    height: 100vh;
+}
+.logo {
+    padding: 6rem 2rem;
+}
+.brand-name {
+    color: var(--light);
+    font-weight: 600;
+}
+.menu-item {
+    display: block;
+    font-size: 2rem;
+    color: var(--light);
+    background-color: var(--light-dark);
+}
