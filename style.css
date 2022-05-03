@@ -20,6 +20,33 @@ a {
 .row {
     --bs-gutter-x: 0;
 }
+/* Header */
+.header-content {
+    background-color: var(--light);
+}
+.navbar-brand {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.nav-link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--grey);
+}
+.navbar-collapse {
+    justify-content: space-between;
+    padding-left: 5rem;
+}
+.cart {
+    font-size: 1.6rem;
+    color: var(--grey);
+}
+/* carousel */
+.carousel-cell {
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--grey);
+}
 /* main */
 #main {
     width: 100%;
@@ -31,6 +58,7 @@ a {
 }
 .rightBar {
     height: 100vh;
+    overflow-y: auto;
 }
 .logo {
     padding: 6rem 2rem;
@@ -44,4 +72,22 @@ a {
     font-size: 2rem;
     color: var(--light);
     background-color: var(--light-dark);
+}
+.menu-item:hover {
+    background-color: var(--grey);
+    color: var(--dark);
+}
+.menu-footer__icon {
+    font-size: 2rem;
+    color: var(--grey);
+}
+.menu-footer__text {
+    font-size: 2rem;
+    color: var(--grey);
+}
+.main-content__item {
+    width: 30%;
+    height: 25rem;
+    background-color: var(--grey);
+    color: var(--dark);
 }
