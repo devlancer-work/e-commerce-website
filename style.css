@@ -98,6 +98,26 @@ a {
     height: 100%;
     background-color: var(--grey);
 }
+
+/* Newsletter */
+#newsletter {
+    background-color: var(--light-dark);
+    color: var(--light);
+    padding: 4rem 0;
+}
+.newsletter-btn {
+    font-size: 1.5rem;
+    background-color: var(--dark);
+    color: var(--grey);
+}
+.form-control {
+    font-size: 1.5rem;
+}
+.newsletter-btn:hover{
+    color: var(--grey);
+    background-color: var(--dark);
+}
+
 /* main */
 #main {
     width: 100%;
@@ -141,4 +161,17 @@ a {
     height: 25rem;
     background-color: var(--grey);
     color: var(--dark);
+}
+
+
+/* Footer */
+.footer-para {
+    font-size: 1.4rem;
+}
+.footer-heading {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.footer-list {
+    list-style-type: none;
 }
