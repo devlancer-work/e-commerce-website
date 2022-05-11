@@ -25,7 +25,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Css -->
-    <link rel="stylesheet" href="./style.css">z
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./shop.css">
 </head>
 
 <body>
@@ -40,7 +41,7 @@
                     <div class="navbar-collapse collapse" id="navbarCollapse">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="#" class="nav-link mx-2 active">Home</a>
+                                <a href="./index.html" class="nav-link mx-2 active">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link mx-2">Shop</a>
@@ -73,64 +74,65 @@
     <!-- main -->
     <main id="main">
 
-        <div class="row">
-            <!-- left bar -->
-            <div class="col-3 leftBar p-0">
-                <div class="logo text-center">
-                    <h1 class="brand-name">E Store</h1>
+        <div class="row container m-auto">
+            <!-- left bar -->   
+            <div class="col-3 leftBar p-4">
+                <div class="category py-4">
+                    <a href="#" class="leftBar-item" id="category">CATEGORIES</a>
+                    <div>
+                        <ul class="leftBar-list">
+                            <li><a href="#" class="leftBar-link mb-4">Men</a></li>
+                            <li><a href="#" class="leftBar-link mb-4">Women</a></li>
+                            <li><a href="#" class="leftBar-link">Kids</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="leftBar-hr">
+                </hr>
+
+                <div class="sort py-4 mb-5">
+                    <a href="#" class="leftBar-item" id="sort">SORT BY</a>
+                    <div>
+                        <ul class="leftBar-list">
+                            <li><a href="#" class="leftBar-link mb-4">Low To High</a></li>
+                            <li><a href="#" class="leftBar-link mb-4">High To Low</a></li>
+                            <li><a href="#" class="leftBar-link">Popularity</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="menu py-4 text-center mb-4">
-                    <a href="#" class="menu-item py-4 my-4">Product</a>
-                    <a href="#" class="menu-item py-4 my-4">Product</a>
-                    <a href="#" class="menu-item py-4 my-4">Product</a>
-                    <a href="#" class="menu-item py-4 my-4">Product</a>
-                </div>
 
-                <div class="menu-footer py-4 d-flex flex-row justify-content-evenly">
-                    <a href="#" class="menu-footer__item">
-                        <i class="fa-solid fa-cart-shopping menu-footer__icon"></i>
-                        <span class="mx-2 menu-footer__text">Cart</span>
-                    </a>
-                    <a href="#" class="menu-footer__item">
-                        <i class="fa-solid fa-star menu-footer__icon"></i>
-                        <span class="mx-2 menu-footer__text">Favorite</span>
-                    </a>
-                    <!-- <a href="#" class="menu-footer__item">
-                        <i class="fa-solid fa-cart-shopping menu-footer__icon"></i>
-                    </a> -->
-                </div>
             </div>
 
             <!-- right bar -->
             <div class="col-9 rightBar px-4">
                 <div class="main-content d-flex flex-wrap">
-                    <div class="main-content__item d-flex align-items-center justify-content-center m-4">
-                        data col
+                    <div class="main-content__item d-flex align-items-center justify-content-center m-2">
+                        <img src="./img/product-1.jpg" alt="product-1" class="img-fluid">
                     </div>
-                    <div class="main-content__item d-flex align-items-center justify-content-center m-4">
-                        data col
+                    <div class="main-content__item d-flex align-items-center justify-content-center m-2">
+                        <img src="./img/product-2.jpg" alt="product-1" class="img-fluid">
                     </div>
-                    <div class="main-content__item d-flex align-items-center justify-content-center m-4">
-                        data col
+                    <div class="main-content__item d-flex align-items-center justify-content-center m-2">
+                        <img src="./img/product-3.jpg" alt="product-1" class="img-fluid">
                     </div>
-                    <div class="main-content__item d-flex align-items-center justify-content-center m-4">
-                        data col
+                    <div class="main-content__item d-flex align-items-center justify-content-center m-2">
+                        <img src="./img/product-4.jpg" alt="product-1" class="img-fluid">
                     </div>
-                    <div class="main-content__item d-flex align-items-center justify-content-center m-4">
-                        data col
+                    <div class="main-content__item d-flex align-items-center justify-content-center m-2">
+                        <img src="./img/product-5.jpg" alt="product-1" class="img-fluid">
                     </div>
-                    <div class="main-content__item d-flex align-items-center justify-content-center m-4">
-                        data col
+                    <div class="main-content__item d-flex align-items-center justify-content-center m-2">
+                        <img src="./img/product-6.jpg" alt="product-1" class="img-fluid">
                     </div>
-                    <div class="main-content__item d-flex align-items-center justify-content-center m-4">
-                        data col
+                    <div class="main-content__item d-flex align-items-center justify-content-center m-2">
+                        <img src="./img/product-7.jpg" alt="product-1" class="img-fluid">
                     </div>
-                    <div class="main-content__item d-flex align-items-center justify-content-center m-4">
-                        data col
+                    <div class="main-content__item d-flex align-items-center justify-content-center m-2">
+                        <img src="./img/product-9.jpg" alt="product-1" class="img-fluid">
                     </div>
-                    <div class="main-content__item d-flex align-items-center justify-content-center m-4">
-                        data col
+                    <div class="main-content__item d-flex align-items-center justify-content-center m-2">
+                        <img src="./img/product-10.jpg" alt="product-1" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -144,7 +146,7 @@
 
     <!-- Flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="./flickity.js"></script>r
+    <script src="./flickity.js"></script>
 </body>
 
 </html>
