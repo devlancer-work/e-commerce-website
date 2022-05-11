@@ -12,6 +12,7 @@
 }
 body {
     font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -42,8 +43,52 @@ a {
     font-size: 1.6rem;
     color: var(--grey);
 }
+/* Cart */
+#cart {
+    width: 30rem;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 0.4rem 0.8rem 0.4rem rgba(0,0,0,.15);
+    transition: all 0.3s ease;
+}
+.cart-hide {
+    transform: translateX(35rem);
+}
 
+.cart-section {
+    position: relative;
+}
+.cart-btn-close {
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: absolute;
+    top: -0.4rem;
+    left: -22%;
+}
+.hr-line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--dark);
+}
 
+.cart-image {
+    width: 100%;
+}
+.cart-price {
+    margin: 0;
+}
+.total-amount {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.cart-btn-checkout {
+    font-size: 1.6rem;
+    width: 100%;
+}
 /* carousel */
 .carousel-cell {
     height: 25rem;
@@ -65,6 +110,9 @@ a {
     font-weight: 400;
     z-index: 10;
 }
+.carousel-label:hover {
+    color: var(--grey);
+}
 /* Banner */
 .banner-img {
     width: 70%;
@@ -79,6 +127,9 @@ a {
 }
 
 /* Featured */
+#featured {
+    padding: 4rem 0;
+}
 .section-heading  {
     font-size: 2.5rem;
     font-weight: 600;
@@ -89,14 +140,59 @@ a {
     border-radius: 10%;
     color: var(--dark);
 }
-.featured-item  {
-    width: 20rem;
-    height: 20rem;
+.featured-item {
+    cursor: pointer;
+    position: relative;
 }
+
+.featured-text {
+    width: 100%;
+}
+
 .featured-img {
     width: 100%;
     height: 100%;
     background-color: var(--grey);
+}
+.product-name {
+    font-size: 1.4rem;
+}
+.product-price {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.addToCart {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 1.8rem;
+    font-weight: 400;
+    z-index: 10;
+    display: none;
+}
+.addToCart:hover {
+    color: var(--grey);
+}
+.addToFav {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 10;
+    border-radius: 50%;
+    display: none;
+}
+.addToFav i {
+    color: #B22727;
+}
+.addToFav:hover i {
+    color: #EE5007;
+}
+.featured-item:hover .addToCart,
+.featured-item:hover .addToFav {
+    display: block;
 }
 
 /* Newsletter */
@@ -118,60 +214,57 @@ a {
     background-color: var(--dark);
 }
 
-/* main */
-#main {
-    width: 100%;
-    height: 100vh;
-}
-.leftBar {
-    background-color: var(--dark);
-    height: 100vh;
-}
-.rightBar {
-    height: 100vh;
-    overflow-y: auto;
-}
-.logo {
-    padding: 6rem 2rem;
-}
-.brand-name {
-    color: var(--light);
+.newsletter-heading {
+    font-size: 3.5rem;
     font-weight: 600;
 }
-.menu-item {
-    display: block;
-    font-size: 2rem;
-    color: var(--light);
-    background-color: var(--light-dark);
-}
-.menu-item:hover {
-    background-color: var(--grey);
-    color: var(--dark);
-}
-.menu-footer__icon {
-    font-size: 2rem;
+.newsletter-heading span {
     color: var(--grey);
 }
-.menu-footer__text {
-    font-size: 2rem;
-    color: var(--grey);
-}
-.main-content__item {
-    width: 30%;
-    height: 25rem;
-    background-color: var(--grey);
-    color: var(--dark);
+.newsletter-text {
+    font-size: 1.4rem;
 }
 
 
 /* Footer */
+#footer {
+    background-color: var(--dark);
+    padding: 4rem 0;
+}
 .footer-para {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    color: var(--grey);
 }
 .footer-heading {
     font-size: 2rem;
     font-weight: 600;
+    margin-bottom: 2.5rem;
+    color: var(--light);
+    text-transform: uppercase;
 }
 .footer-list {
     list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+.list-item a{
+    font-size: 1.4rem;
+    color: var(--grey);
+}
+.list-item a:hover {
+    color: var(--light);
+}
+.address {
+    font-size: 1.5rem;
+    text-align: left;
+    color: var(--grey);
+    margin-bottom: 2rem;
+}
+.details {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--grey);
+}
+.social-icon {
+    color: var(--light);
 }

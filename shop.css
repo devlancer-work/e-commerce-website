@@ -1,4 +1,3 @@
-
 /* LeftBar */
 .leftBar-item {
     position: relative;
@@ -35,6 +34,11 @@
 /* main */
 
 .main-content__item {
-    background-color: var(--grey);
     color: var(--dark);
+    position: relative;
+    cursor: pointer;
+}
+.main-content__item:hover .addToCart,
+.main-content__item:hover .addToFav {
+    display: block;
 }
