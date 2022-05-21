@@ -58,6 +58,9 @@ function ready()
         })
     })
 
+    // checkout 
+    document.querySelector('.cart-btn-checkout').addEventListener('click', checkoutCart)
+
 }
 
 
@@ -67,26 +70,8 @@ function itemToCart(cartItem){
     const itemImg = cartItem.querySelector('.featured-img img').src
     const itemName = cartItem.querySelector('.product-name').textContent
     const itemPrice = cartItem.querySelector('.product-price').textContent
-    // console.log(itemName, itemPrice, itemImg)
-
-//     //<div class="cart-item row mb-4">
-//           <div class="col-3">
-//              <img src="./img/product-1.jpg" alt="cart-item-1" class="cart-image">
-//          </div>
-//          <div class="col-6 d-flex flex-column px-2 justify-content-center align-items-start">
-//              <h3 class="cart-title mb-2">
-//                  Sneakers
-//              </h3>
-//              <p class="cart-price">
-//                  $20.45
-//              </p>
-//          </div>
-//          <div class="col-3 d-flex align-items-center">
-//              <a href="#" class="btn cart-btn-remove btn-danger">Remove</a>
-//          </div>
-//        </div>
-
-    const newCartItem = `<div class="cart-item row mb-4">
+    const id = cartItem.dataset.itemId
+    const newCartItem = `<div class="cart-item row mb-4" data-item-id="${id}">
                             <div class="col-3">
                             <img src="${itemImg}" alt="cart-item-1" class="cart-image">
                             </div>
@@ -168,4 +153,49 @@ function updateCart(){
 
     sumTotalAmont = Math.round(sumTotalAmont * 100) / 100
     document.querySelector('.total-amount').innerText = `$ ${sumTotalAmont}`
+}
+
+// checkout
+
+var stripeHandler = StripeCheckout.configure({
+    key: stripePublicKey,
+    locale: 'auto',
+    token: function(token){
+        var items = []
+        var cartItemConatiner = document.querySelector('.cart-item-list');
+        var cartRows = document.querySelectorAll('.cart-item')
+        cartRows.forEach(function(cartRow) {
+            var id = cartRow.dataset.itemId
+            items.push({
+                id: id
+            })
+        })
+        fetch('/purchase', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                stripeTokenId: token.id,
+                items: items
+            })    
+        }).then(function(res){
+            return res.json()
+        }).then(function(data){
+            alert(data.message)
+            var cartItems = document.querySelector('.cart-item-list')
+            while(cartItems.hasChildNodes()){
+                cartItems.removeChild(cartItems.firstChild)
+            }
+        })
+    }
+})
+
+function checkoutCart(){
+    var priceElement = document.querySelector('.total-amount')
+    var price = parseFloat(priceElement.textContent.replace('$', '')) * 100
+    stripeHandler.open({
+        amount: price
+    })
 }
